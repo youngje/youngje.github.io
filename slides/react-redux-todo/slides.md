@@ -123,4 +123,4 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-<!-- .slide:data-background-iframe="../../cra/build" -->
+<!-- .slide:data-background-iframe="../../cra/build/index.html" -->
