@@ -9,14 +9,18 @@
 
 -----
 
-### 오늘 목표
+### 오늘 목표 <!-- .element: class="green" -->
+
+-----
+
+#### 오늘 목표
 
 - React로 간단한 SPA 작성해 보기 <!-- .element: class="fragment" -->
 - Front-end 개발의 재미 느껴보기 <!-- .element: class="fragment" -->
 
 -----
 
-### Before Start
+### Before Start <!-- .element: class="green" -->
 
 -----
 
@@ -39,18 +43,18 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-#### Dev tools
+#### Dev tools 설치 🛠
 
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=ko)
 - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ko)
 
 -----
 
-### Wrap up!
+### Wrap up! <!-- .element: class="green" -->
 
 -----
 
-### React
+### ⚛️ React
 
 - Declarative views <!-- .element: class="fragment" -->
 - Component-Based <!-- .element: class="fragment" -->
@@ -75,7 +79,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### Thinking in React 🤔
+### Thinking in React 🤔 <!-- .element: class="green" -->
 
 -----
 
@@ -94,7 +98,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### 무엇을 만들까? 🛠
+### 무엇을 만들까? 🛠 <!-- .element: class="green" -->
 
 -----
 
@@ -104,7 +108,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### Let's code! 👨‍💻 👩‍💻
+### Let's code! 👨‍💻 👩‍💻 <!-- .element: class="green" -->
 
 -----
 
@@ -112,11 +116,11 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 ```sh [1|2|3|4]
 ❯ npx create-react-app todo
-... install and setting
+... install and setting 📦
 ❯ cd todo
 ❯ npm start
 ```
 
 -----
 
-<!-- .slide:data-background-iframe="http://localhost:3000/" -->
+<!-- .slide:data-background-iframe="../../cra/build" -->
