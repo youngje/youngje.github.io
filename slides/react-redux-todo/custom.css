@@ -4,7 +4,7 @@ body, h1, h2, h3, h4, h5, h6, li, p, span, div {
 }
 
 .red {color:#FF5E99 !important;}
-.green {color:green !important;}
+.green {color:#95e752 !important;}
 .blue {color:#268bd2 !important;}
 .grey {color: #807E7E !important;}
 .yellow {color:#e7ad52 !important;}
@@ -21,22 +21,33 @@ body, h1, h2, h3, h4, h5, h6, li, p, span, div {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  color: #eee8d5;
+  color: #c4e6a7;
   font-weight: 800 !important;
 }
 
-.fontBrush {
-  font-family: 'Nanum Brush Script', cursive !important;
+.fontPen {
+  font-family:'Nanum Pen Script',cursive !important;
+}
+.pointGreen {
+  color:#7abe42 !important;
+  text-shadow: 2px 2px #5b5959 !important;
 }
 
 strong {
-  color:#e7ad52;
+  color:#95e752;
 }
 
 blockquote {
   width: 80% !important;
 }
 
-.reveal .slides section .fragment.highlight-red.visible {
-  color: #FF5E99;
+.reveal .slides section .fragment.highlight-current-yellow {
+	opacity: 1;
+	visibility: inherit;
+}
+.reveal .slides section .fragment.highlight-yellow.visible {
+  color: #e7ad52;
+}
+.reveal .slides section .fragment.highlight-current-yellow.current-fragment {
+	color: #e7ad52;
 }
