@@ -83,7 +83,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-![](./images/thinking-in-react.png) <!-- .element: style="height:600px" -->
+![](./images/thinking-in-react.png) <!-- .element: style="height:450px" -->
 
 [우리말](https://ko.reactjs.org/docs/thinking-in-react.html) | [English](https://reactjs.org/docs/thinking-in-react.html)
 
@@ -104,7 +104,48 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 ### Single Page Application
 
-![](./images/todo.png)
+![](./images/todo.png) <!-- .element: height="400px" -->
+
+-----
+
+### TodoMVC
+
+<iframe
+  data-src="https://todomvc.com/"
+  data-preload
+  width="1200px"
+  height="500px"
+></iframe>
+
+-----
+
+### 기본 spec
+
+- 새로운 Todo 입력
+- Todo item 클릭 시 완료/미완료 toggle
+- Todo item 삭제
+- 미완료 잔여 Todo 수 노출
+
+-----
+
+### 추가 spec
+
+- 페이지 진입 시 입력칸에 자동 focus
+- 완료여부 필터 기능
+- Todo item double click 시 수정
+- 전체 Todo 일괄 완료
+- 완료한 Todo 일괄 삭제
+
+<div style="padding-top:50px;font-size:30px">참고) <a href="https://github.com/tastejs/todomvc/blob/master/app-spec.md">전체 spec</a></div>
+
+-----
+
+### Markup
+
+<span>📌 React 구현에 집중하기 위해</span></br>
+<span>Markup은 template 사용합니다.</span>
+
+<a href="https://github.com/tastejs/todomvc-app-template">Todo template</a>
 
 -----
 
@@ -114,8 +155,10 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 #### Open the terminal
 
-```sh [1|2|3|4]
+```sh [1|2-3|4|5|6]
 ❯ npx create-react-app todo
+# for typescript users!
+# ❯ npx create-react-app todo --template typescript
 ... install and setting 📦
 ❯ cd todo
 ❯ npm start
@@ -124,3 +167,50 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 -----
 
 <!-- .slide:data-background-iframe="../../cra/build/index.html" -->
+
+-----
+
+### Prepare Mock Data
+
+Todo 데이터 정의하기
+
+```js [|2-6|7-11]
+const MOCK_DATA = [
+  {
+    id: 'some-random-value-0',
+    name: 'Make todos with React',
+    completed: false,
+  },
+  {
+    id: 'some-random-value-1',
+    name: 'try fetch api',
+    completed: true,
+  }
+];
+```
+
+-----
+
+### Prepare Markup
+
+- [template](https://github.com/tastejs/todomvc-app-template/blob/master/index.html) 붙여넣기
+- css 적용 하기 <small>with</small> [todomvc-app-css](https://github.com/tastejs/todomvc-app-css)
+
+
+<div class="fragment">
+
+```sh
+❯ yarn add todomvc-app-css
+```
+
+```js
+import 'todomvc-app-css/index.css';
+```
+
+</div>
+
+-----
+
+#### Break The UI Into A Component Hierarchy
+
+- Component 분리하기
