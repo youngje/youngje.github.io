@@ -108,6 +108,10 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
+<!-- .slide:data-background-iframe="../../cra/build/todos.html" -->
+
+-----
+
 ### TodoMVC
 
 <iframe
@@ -121,16 +125,15 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 ### 기본 spec
 
-- 새로운 Todo 입력
-- Todo item 클릭 시 완료/미완료 toggle
-- Todo item 삭제
 - 미완료 잔여 Todo 수 노출
+- 새로운 Todo 입력
+- 완료/미완료 toggle
+- Todo item 삭제
 
 -----
 
 ### 추가 spec
 
-- 페이지 진입 시 입력칸에 자동 focus
 - 완료여부 필터 기능
 - Todo item double click 시 수정
 - 전체 Todo 일괄 완료
