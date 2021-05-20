@@ -1,15 +1,15 @@
 ### Table of Contents
 
-1. 오늘 목표
-1. Before start
-1. Wrap up! - React, Redux
-1. Thinking in React
-1. 무엇을 만들까?
-1. Let's code
+1. 📌 오늘 목표  <!-- .element: class="fragment highlight-current-yellow" -->
+1. 📦 Before start <!-- .element: class="fragment highlight-current-yellow" -->
+1. Wrap up! - React, Redux ⚛️ <!-- .element: class="fragment highlight-current-yellow" -->
+1. 🛠 무엇을 만들까? <!-- .element: class="fragment highlight-current-yellow" -->
+1. 🤔 Thinking in React <!-- .element: class="fragment highlight-current-yellow" -->
+1. Let's code 👨‍💻👩‍💻 <!-- .element: class="fragment highlight-current-yellow" -->
 
 -----
 
-### 오늘 목표 <!-- .element: class="green" -->
+### 📌 오늘 목표 <!-- .element: class="green" -->
 
 -----
 
@@ -20,7 +20,7 @@
 
 -----
 
-### Before Start <!-- .element: class="green" -->
+### 📦 Before Start <!-- .element: class="green" -->
 
 -----
 
@@ -35,11 +35,26 @@
 
 -----
 
-##### nvm
+#### nvm
 
 ![](./images/nvm.png) <!-- .element: style="height:450px" -->
 
 windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/dev-environment/javascript/nodejs-on-windows)
+
+-----
+
+#### yarn
+
+- package manager by Facebook
+- Creact-react-app 에서 기본으로 사용
+
+<div style="width: 700px;margin: 0 auto;">
+
+```sh
+❯ npm install -g yarn
+```
+
+</div>
 
 -----
 
@@ -50,7 +65,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### Wrap up! <!-- .element: class="green" -->
+###  Wrap up! <!-- .element: class="green" -->
 
 -----
 
@@ -79,36 +94,7 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### Thinking in React 🤔 <!-- .element: class="green" -->
-
------
-
-![](./images/thinking-in-react.png) <!-- .element: style="height:450px" -->
-
-[우리말](https://ko.reactjs.org/docs/thinking-in-react.html) | [English](https://reactjs.org/docs/thinking-in-react.html)
-
------
-
-1. 목업으로 시작하기 <!-- .element: class="fragment highlight-current-yellow" -->
-2. UI를 Component 계층 구조로 나누기 <!-- .element: class="fragment highlight-current-yellow" -->
-3. React로 정적인 버전 만들기 <!-- .element: class="fragment highlight-current-yellow" -->
-4. UI state에 대한 완벽하면서 최소한의 표현 찾기 <!-- .element: class="fragment highlight-current-yellow" -->
-5. State를 어디에 둘지 정하기 <!-- .element: class="fragment highlight-current-yellow" -->
-6. 역방향 Data Flow 추가하기 <!-- .element: class="fragment highlight-current-yellow" -->
-
------
-
 ### 무엇을 만들까? 🛠 <!-- .element: class="green" -->
-
------
-
-### Single Page Application
-
-![](./images/todo.png) <!-- .element: height="400px" -->
-
------
-
-<!-- .slide:data-background-iframe="../../cra/build/todos.html" -->
 
 -----
 
@@ -143,12 +129,117 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
+### Single Page Application
+
+<iframe
+  data-src="../../cra/build/todos.html"
+  data-preload
+  width="1200px"
+  height="500px"
+></iframe>
+
+-----
+
 ### Markup
 
 <span>📌 React 구현에 집중하기 위해</span></br>
 <span>Markup은 template 사용합니다.</span>
 
 <a href="https://github.com/tastejs/todomvc-app-template">Todo template</a>
+
+-----
+
+### Thinking in React 🤔 <!-- .element: class="green" -->
+
+-----
+
+![](./images/thinking-in-react.png) <!-- .element: style="height:450px" -->
+
+[우리말](https://ko.reactjs.org/docs/thinking-in-react.html) | [English](https://reactjs.org/docs/thinking-in-react.html)
+
+-----
+
+1. 목업으로 시작하기 <!-- .element: class="fragment highlight-current-yellow" -->
+2. UI를 Component 계층 구조로 나누기 <!-- .element: class="fragment highlight-current-yellow" -->
+3. React로 정적인 버전 만들기 <!-- .element: class="fragment highlight-current-yellow" -->
+4. UI state에 대한 완벽하면서 최소한의 표현 찾기 <!-- .element: class="fragment highlight-current-yellow" -->
+5. State를 어디에 둘지 정하기 <!-- .element: class="fragment highlight-current-yellow" -->
+6. 역방향 Data Flow 추가하기 <!-- .element: class="fragment highlight-current-yellow" -->
+
+-----
+
+1. 목업으로 시작하기 <!-- .element: class="yellow" -->
+2. UI를 Component 계층 구조로 나누기
+3. React로 정적인 버전 만들기
+4. UI state에 대한 완벽하면서 최소한의 표현 찾기
+5. State를 어디에 둘지 정하기
+6. 역방향 Data Flow 추가하기
+
+-----
+
+Todo 데이터 정의하기
+
+<div style="display:flex">
+  <div style="flex-grow:1">
+    <img src="./images/todo.png" width="700px"/>
+  </div>
+  <div class="fragment" style="width: 700px;margin: 0 auto;">
+
+```js [|2-6|7-11]
+const MOCK_DATA = [
+  {
+    id: 'some-random-value-0',
+    name: 'Make todos with React',
+    completed: false,
+  },
+  {
+    id: 'some-random-value-1',
+    name: 'try fetch api',
+    completed: true,
+  }
+];
+```
+
+  </div>
+</div>
+
+-----
+
+1. 목업으로 시작하기
+2. UI를 Component 계층 구조로 나누기 <!-- .element: class="yellow" -->
+3. React로 정적인 버전 만들기
+4. UI state에 대한 완벽하면서 최소한의 표현 찾기
+5. State를 어디에 둘지 정하기
+6. 역방향 Data Flow 추가하기
+
+-----
+
+<!-- .slide:data-transition="none" -->
+![](./images/todos.001.jpeg)
+
+-----
+
+<!-- .slide:data-transition="none" -->
+![](./images/todos.002.jpeg)
+
+-----
+
+<!-- .slide:data-transition="none" -->
+![](./images/todos.003.jpeg)
+
+-----
+
+<!-- .slide:data-transition="none" -->
+![](./images/todos.004.jpeg)
+
+-----
+
+1. 목업으로 시작하기
+2. UI를 Component 계층 구조로 나누기
+3. React로 정적인 버전 만들기 <!-- .element: class="yellow" -->
+4. UI state에 대한 완벽하면서 최소한의 표현 찾기
+5. State를 어디에 둘지 정하기
+6. 역방향 Data Flow 추가하기
 
 -----
 
@@ -173,34 +264,12 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 -----
 
-### Prepare Mock Data
-
-Todo 데이터 정의하기
-
-```js [|2-6|7-11]
-const MOCK_DATA = [
-  {
-    id: 'some-random-value-0',
-    name: 'Make todos with React',
-    completed: false,
-  },
-  {
-    id: 'some-random-value-1',
-    name: 'try fetch api',
-    completed: true,
-  }
-];
-```
-
------
-
 ### Prepare Markup
 
 - [template](https://github.com/tastejs/todomvc-app-template/blob/master/index.html) 붙여넣기
 - css 적용 하기 <small>with</small> [todomvc-app-css](https://github.com/tastejs/todomvc-app-css)
 
-
-<div class="fragment">
+<div class="fragment" style="width: 700px;margin: 0 auto;">
 
 ```sh
 ❯ yarn add todomvc-app-css
@@ -217,3 +286,20 @@ import 'todomvc-app-css/index.css';
 #### Break The UI Into A Component Hierarchy
 
 - Component 분리하기
+
+git branch: 2-component-hierarchy
+
+-----
+
+#### Refactor with Redux
+
+- [Redux 시작하기](https://ko.redux.js.org/introduction/getting-started/)
+- [Redux ](https://redux.js.org/redux-toolkit/overview)
+
+<div style="width: 700px;margin: 0 auto;">
+
+```sh
+❯ yarn add @reduxjs/toolkit react-redux
+```
+
+</div>
