@@ -319,10 +319,11 @@ import 'todomvc-app-css/index.css';
 
 -----
 
-#### Build a Static version in React
+#### Add minimal State and Inverse Data Flow
 
-- `props` 만 사용하여 App 구성하기
-- `state` 사용 금지
+- 기능을 모두 충족할 수 있는 최소한의 `state` 사용하여 App 구성하기
+- `state`는 해당 값을 사용하는 공통의 부모 component에 위치
+- `state`를 변경할 수 있는 함수를 자식 component로 전달하여 앱 완성
 
 <small>(결과) [git branch: 4-add-state-basic-spec](https://github.com/youngje/react-todo/tree/4-add-state-basic-spec)</small>
 
