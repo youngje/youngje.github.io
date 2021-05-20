@@ -111,19 +111,37 @@ windows? - [Windows에 NodeJS 설치](https://docs.microsoft.com/ko-kr/windows/d
 
 ### 기본 spec
 
-- 미완료 잔여 Todo 수 노출
-- 새로운 Todo 입력
-- 완료/미완료 toggle
-- Todo item 삭제
+<div style="display:flex">
+  <div style="flex-grow:1">
+    <img src="./images/todo.png" width="450px"/>
+  </div>
+  <div style="flex-grow:2">
+    <ul style="padding-top: 30px;">
+      <li> 미완료 잔여 Todo 수 노출</li>
+      <li> 새로운 Todo 입력</li>
+      <li> 완료/미완료 toggle</li>
+      <li> Todo item 삭제</li>
+    </ul>
+  </div>
+</div>
 
 -----
 
 ### 추가 spec
 
-- 완료여부 필터 기능
-- Todo item double click 시 수정
-- 전체 Todo 일괄 완료
-- 완료한 Todo 일괄 삭제
+<div style="display:flex">
+  <div style="flex-grow:1">
+    <img src="./images/todo.png" width="450px"/>
+  </div>
+  <div style="flex-grow:2">
+    <ul style="padding-top: 30px;">
+      <li>완료여부 필터 기능</li>
+      <li>Todo item double click 시 수정</li>
+      <li>전체 Todo 일괄 완료</li>
+      <li>완료한 Todo 일괄 삭제</li>
+    </ul>
+  </div>
+</div>
 
 <div style="padding-top:50px;font-size:30px">참고) <a href="https://github.com/tastejs/todomvc/blob/master/app-spec.md">전체 spec</a></div>
 
@@ -287,14 +305,33 @@ import 'todomvc-app-css/index.css';
 
 - Component 분리하기
 
-git branch: 2-component-hierarchy
+<small>(결과) [git branch: 2-component-hierarchy](https://github.com/youngje/react-todo/tree/2-component-hierarchy)</small>
+
+-----
+
+#### Build a Static version in React
+
+- `props` 만 사용하여 App 구성하기
+- `state` 사용 금지
+
+<small>(결과) [git branch: 3-static-react](https://github.com/youngje/react-todo/tree/3-static-react)</small>
+
+
+-----
+
+#### Build a Static version in React
+
+- `props` 만 사용하여 App 구성하기
+- `state` 사용 금지
+
+<small>(결과) [git branch: 4-add-state-basic-spec](https://github.com/youngje/react-todo/tree/4-add-state-basic-spec)</small>
 
 -----
 
 #### Refactor with Redux
 
 - [Redux 시작하기](https://ko.redux.js.org/introduction/getting-started/)
-- [Redux ](https://redux.js.org/redux-toolkit/overview)
+- [Redux toolkit overview](https://redux.js.org/redux-toolkit/overview)
 
 <div style="width: 700px;margin: 0 auto;">
 
@@ -303,3 +340,5 @@ git branch: 2-component-hierarchy
 ```
 
 </div>
+
+<small>(결과) [git branch: 6-refactor-with-redux](https://github.com/youngje/react-todo/tree/6-refactor-with-redux)</small>
