@@ -273,7 +273,7 @@ const MOCK_DATA = [
 # ❯ npx create-react-app todo --template typescript
 ... install and setting 📦
 ❯ cd todo
-❯ npm start
+❯ yarn start
 ```
 
 -----
