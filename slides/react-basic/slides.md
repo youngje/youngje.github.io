@@ -1,37 +1,146 @@
 ### Table of Contents
 
-1. 📌 오늘 목표  <!-- .element: class="fragment highlight-current-yellow" -->
-1. 📦 Before start <!-- .element: class="fragment highlight-current-yellow" -->
-1. Wrap up! - React, Redux ⚛️ <!-- .element: class="fragment highlight-current-yellow" -->
-1. 🛠 무엇을 만들까? <!-- .element: class="fragment highlight-current-yellow" -->
-1. 🤔 Thinking in React <!-- .element: class="fragment highlight-current-yellow" -->
-1. Let's code 👨‍💻👩‍💻 <!-- .element: class="fragment highlight-current-yellow" -->
+1. ⚛️ React?  <!-- .element: class="fragment highlight-current-yellow" -->
+1. React Element & React Component  <!-- .element: class="fragment highlight-current-yellow" -->
+1. JSX(React Element) <!-- .element: class="fragment highlight-current-yellow" -->
+1. ReactDOM / ReactDOMServer <!-- .element: class="fragment highlight-current-yellow" -->
+1. React Component <!-- .element: class="fragment highlight-current-yellow" -->
+1. React event handling <!-- .element: class="fragment highlight-current-yellow" -->
+1. React Hooks <!-- .element: class="fragment highlight-current-yellow" -->
+1. React Devtools <!-- .element: class="fragment highlight-current-yellow" -->
+1. Thinking in React <!-- .element: class="fragment highlight-current-yellow" -->
+1. Tips <!-- .element: class="fragment highlight-current-yellow" -->
+1. Q&A <!-- .element: class="fragment highlight-current-yellow" -->
 
 -----
 
-### 📌 오늘 목표 <!-- .element: class="green" -->
+### React? 🤔 <!-- .element: class="green" -->
 
 -----
 
-#### 오늘 목표
+#### React?
 
-- React로 간단한 SPA 작성해 보기 <!-- .element: class="fragment" -->
-- Front-end 개발의 재미 느껴보기 <!-- .element: class="fragment" -->
+<small>[추천] React 공식 문서 [https://reactjs.org/](https://reactjs.org/)</small>
 
------
-
-### 📦 Before Start <!-- .element: class="green" -->
+- <!-- .element: class="fragment" --> A JavaScript <strong class="yellow">library</strong> for building user interfaces
 
 -----
 
-#### Node.js 설치
+#### React 특징
+
+- [Declarative](https://ko.wikipedia.org/wiki/%EC%84%A0%EC%96%B8%ED%98%95_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D) <!-- .element: class="fragment yellow" -->
+- Component-Based <!-- .element: class="fragment yellow" -->
+- Learn once, Write anywhere <!-- .element: class="fragment" -->
+  - Node.js, React Native
+
+-----
+
+#### Declarative
+
+<ul>
+ <li class="fragment">Declarative <strong class="yellow">vs</strong> Imperative</li>
+ <li class="fragment">What <strong class="yellow">vs</strong> How</li>
+ <li class="fragment">어떤 UI로 보여줄까 <strong class="yellow">vs</strong> 어떻게 UI로 보여줄까</li>
+</ul>
+
+-----
+
+#### Component-Based
+
+<ul style="padding-top: 30px;">
+ <li class="fragment" style="font-size:30px;">작은 컴포넌트를 조합해서 UI 개발</li>
+ <li class="fragment" style="font-size:30px;">컴포넌트의 상태(데이터)는 컴포넌트 스스로 관리(캡슐화)</li>
+</ul>
+
+-----
+
+```js
+  f(data) = View
+```
+
+```js
+  function(props) { return ReactElement }
+```
+<!-- .element: class="fragment" -->
+
+-----
 
 <iframe
-  data-src="https://nodejs.org/ko/about/releases/"
+  data-src="https://www.npmtrends.com/react-vs-vue-vs-@angular/core"
   data-preload
   width="1200px"
   height="500px"
 ></iframe>
+
+-----
+
+#### 2021 stackoverflow survey
+
+<iframe
+  data-src="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks"
+  data-preload
+  width="1200px"
+  height="500px"
+></iframe>
+
+-----
+
+### React Element <!-- .element: class="green" -->
+
+### & <!-- .element: class="green" -->
+
+### React Component <!-- .element: class="green" -->
+
+-----
+
+#### React Element
+
+- `type`과 `props`를 가지는 객체
+- syntatic sugar => jsx
+
+```js [1,5|2|3|4|]
+React.createElement(
+  'div', // type
+  { className: 'greeting' }, // props
+  'Hello World!' // children
+)
+```
+
+```js
+{
+  type: 'div',
+  props: {
+    className: 'greeting',
+    children: 'Hello World!'
+  }
+}
+```
+<!-- .element: class="fragment" -->
+
+-----
+
+```jsx
+// with jsx
+<button className='button-blue'>
+  <b>
+    OK!
+  </b>
+</button>
+```
+
+```js
+// without jsx
+React.createElement(
+  'button',
+  { className: 'button-blue' },
+  React.createElement(
+    'b',
+    null,
+    'OK!'
+  )
+);
+```
+<!-- .element: class="fragment" -->
 
 -----
 
